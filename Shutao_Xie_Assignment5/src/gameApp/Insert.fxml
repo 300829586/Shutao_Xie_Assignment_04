@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameApp.GameController">
+   <children>
+      <TabPane layoutX="8.0" layoutY="8.0" prefHeight="526.0" prefWidth="784.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab id="insertTitle" style="font-weight: bold;" text="Insert To Game">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Enter the information for the game:" />
+                        <Label layoutX="27.0" layoutY="155.0" text="Game Title:">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Label>
+                        <TextField fx:id="gameTitle_InsertGame_TextField" layoutX="107.0" layoutY="150.0" onKeyTyped="#InputToActivateSubmit" prefHeight="30.0" prefWidth="190.0" promptText="Game Title" />
+                        <Button fx:id="submit_InsertGame_Button" disable="true" layoutX="392.0" layoutY="375.0" mnemonicParsing="false" onAction="#ClickSubmitButton" text="Submit">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Button>
+                        <Button fx:id="cancel_InsertGame_Button" layoutX="266.0" layoutY="375.0" mnemonicParsing="false" onAction="#ClickCancelButton" text="Cancel">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Insert To Player">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="427.0" prefWidth="784.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Enter the information for player:" />
+                        <Button fx:id="cancel_InsertPlayer_Button" layoutX="237.0" layoutY="425.0" mnemonicParsing="false" onAction="#ClickCancelButton" text="Cancel" />
+                        <Button fx:id="submit_InsertPlayer_Button" disable="true" layoutX="379.0" layoutY="425.0" mnemonicParsing="false" onAction="#ClickSubmitButton" text="Submit" />
+                        <TextField fx:id="firstName_InsertPlayer_TextField" layoutX="163.0" layoutY="53.0" promptText="First Name" />
+                        <Label layoutX="17.0" layoutY="59.0" text="First Name:" />
+                        <TextField fx:id="lastName_InsertPlayer_TextField" layoutX="163.0" layoutY="103.0" promptText="Last Name" />
+                        <Label layoutX="17.0" layoutY="109.0" text="Last Name:" />
+                        <TextField fx:id="address_InsertPlayer_TextField" layoutX="163.0" layoutY="152.0" promptText="Address" />
+                        <TextField fx:id="postalCode_InsertPlayer_TextField" layoutX="163.0" layoutY="203.0" promptText="Postal Code" />
+                        <Label layoutX="17.0" layoutY="209.0" text="Postal Code:" />
+                        <TextField fx:id="province_InsertPlayer_TextField" layoutX="163.0" layoutY="257.0" promptText="Province" />
+                        <Label layoutX="17.0" layoutY="263.0" text="Province:" />
+                        <Label layoutX="17.0" layoutY="320.0" text="Phone Number:" />
+                        <TextField fx:id="phone_InsertPlayer_TextField" layoutX="163.0" layoutY="314.0" onKeyTyped="#InputToActivateSubmit" promptText="Phone Number" />
+                        <Label fx:id="status_InsertPlayer_Label" layoutX="20.0" layoutY="377.0" text="Status: No operation" />
+                        <Label layoutX="17.0" layoutY="158.0" text="Address:" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="insertToPlayerAndGame_Tab" onSelectionChanged="#ClickInsertToPlayerAndGame_Tab" text="Insert To PlayerAndGame">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Enter the information for PlayerAndGame:" />
+                        <Label layoutX="24.0" layoutY="120.0" text="Game Id:" />
+                        <Label layoutX="24.0" layoutY="166.0" text="Player Id:" />
+                        <Label layoutX="24.0" layoutY="212.0" text="Playing Date:" />
+                        <Label layoutX="24.0" layoutY="258.0" text="Score:" />
+                        <TextField fx:id="date_InsertPlayerAndGame_TextField" layoutX="181.0" layoutY="206.0" promptText="Playing Date" />
+                        <TextField fx:id="score_InsertPlayerAndGame_TextField" layoutX="181.0" layoutY="252.0" onKeyTyped="#InputToActivateSubmit" promptText="Score" />
+                        <Button fx:id="cancel_InsertPlayerAndGame_Button" layoutX="270.0" layoutY="404.0" mnemonicParsing="false" onAction="#ClickCancelButton" text="Cancel" />
+                        <Button fx:id="submit_InsertPlayerGame_Button" disable="true" layoutX="366.0" layoutY="404.0" mnemonicParsing="false" onAction="#ClickSubmitButton" text="Submit" />
+                        <Label fx:id="status_InsertPlayerAndGame_Label" layoutX="14.0" layoutY="362.0" text="Status: No operation" />
+                        <ComboBox fx:id="gameId_InsertPlayerAndGame_Combobox" layoutX="178.0" layoutY="114.0" prefHeight="39.0" prefWidth="225.0" />
+                        <ComboBox fx:id="playerId_InsertPlayerAndGame_Combobox" layoutX="178.0" layoutY="160.0" prefHeight="39.0" prefWidth="225.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

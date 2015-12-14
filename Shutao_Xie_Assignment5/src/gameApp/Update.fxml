@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="update_pane" onMouseEntered="#mouseenter_pane" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameApp.GameController">
+   <children>
+      <Label layoutX="19.0" layoutY="34.0" prefHeight="42.0" prefWidth="249.0" text="Update a player's information:" />
+      <ComboBox fx:id="playerId_Update_Combobox" layoutX="331.0" layoutY="37.0" onAction="#selectComboBox" prefHeight="39.0" prefWidth="282.0" promptText="select a player Id">
+      </ComboBox>
+      <GridPane fx:id="pngInfo_gridpane_display" layoutX="13.0" layoutY="117.0" prefHeight="223.0" prefWidth="614.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="13.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="140.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="216.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="97.0" minWidth="8.0" prefWidth="11.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="239.0" minWidth="10.0" prefWidth="239.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="97.0" minWidth="0.0" prefWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="157.0" text="Fisrt Name:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="175.0" text="Last Name:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="196.0" text="Address:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="firstName_upadte_label" alignment="CENTER" prefHeight="27.0" prefWidth="232.0" text="---" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="lastName_update_label" alignment="CENTER" prefHeight="27.0" prefWidth="217.0" text="---" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="address_update_label" alignment="CENTER" prefHeight="27.0" prefWidth="226.0" text="---" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label fx:id="postalCode_update_label" alignment="CENTER" prefHeight="27.0" prefWidth="254.0" text="---" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label fx:id="province_update_label" alignment="CENTER" prefHeight="27.0" prefWidth="251.0" text="---" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label fx:id="phoneNumber_update_label" alignment="CENTER" prefHeight="27.0" prefWidth="236.0" text="---" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="169.0" text="Postal Code:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="170.0" text="Province:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="160.0" text="Phone:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="firstName_upadte_textField" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextField fx:id="lastName_update_textField" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextField fx:id="address_update_textField" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextField fx:id="postalCode_update_textField" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextField fx:id="province_update_textField" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <TextField fx:id="phoneNumber_update_textField" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="228.0" text="Original Info" GridPane.columnIndex="2" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="204.0" text="New Info" GridPane.columnIndex="4" />
+         </children>
+      </GridPane>
+      <Button fx:id="back_display_button" layoutX="186.0" layoutY="427.0" mnemonicParsing="false" onAction="#ClickCancelButton" text="Back" />
+      <Button fx:id="submit_update_button" layoutX="413.0" layoutY="427.0" mnemonicParsing="false" onAction="#Clicksubmit_update_button" text="Submit" />
+   </children>
+</AnchorPane>

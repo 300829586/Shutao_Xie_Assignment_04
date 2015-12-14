@@ -1,0 +1,16 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{
+	-fx-font-family:helvetico;
+	-fx-font-size:12px;
+	-fx-font-weight:bold;
+	-fx-hgap:1;
+	-fx-vgap: 1;
+}
+
+#display_pane{
+	-fx-font-weight:bold;
+}
+
+#update_pane{
+	-fx-font-weight:bold;
+}

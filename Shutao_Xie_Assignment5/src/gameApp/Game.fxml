@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.collections.*?>
+
+<GridPane prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameApp.GameController">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="93.0" minWidth="10.0" prefWidth="23.0" />
+      <ColumnConstraints maxWidth="254.0" minWidth="49.0" prefWidth="207.0" />
+      <ColumnConstraints maxWidth="280.0" minWidth="49.0" prefWidth="263.0" />
+      <ColumnConstraints maxWidth="480.0" minWidth="48.0" prefWidth="187.0" />
+      <ColumnConstraints maxWidth="480.0" minWidth="12.0" prefWidth="12.0" />
+      <ColumnConstraints maxWidth="279.0" minWidth="3.0" prefWidth="3.0" />
+      <ColumnConstraints maxWidth="200.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="95.0" minWidth="0.0" prefWidth="0.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="25.0" />
+      <RowConstraints maxHeight="62.0" minHeight="30.0" prefHeight="62.0" />
+      <RowConstraints maxHeight="440.0" minHeight="26.0" prefHeight="401.0" />
+      <RowConstraints maxHeight="284.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="142.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="58.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="58.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="29.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="29.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="176.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="176.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="95.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="95.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="39.0" minHeight="0.0" prefHeight="0.0" />
+   </rowConstraints>
+   <children>
+      <Label text="Select an operation:" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <padding>
+            <Insets left="30.0" />
+         </padding></Label>
+      
+      <ComboBox fx:id="operationComboBox" layoutX="5.0" onAction="#selectComboBox" prefHeight="34.0" prefWidth="225.0" promptText="Select Here" GridPane.columnIndex="2" GridPane.rowIndex="1">
+	      <items>
+	        <FXCollections fx:factory="observableArrayList">
+	          <String fx:value="Display" />
+	          <String fx:value="Insert" />
+	          <String fx:value="Update" />
+	        </FXCollections>
+	      </items>
+         <padding>
+            <Insets left="75.0" />
+         </padding>
+      </ComboBox>
+      <Button fx:id="goButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#ClickGoButton" prefHeight="31.0" prefWidth="152.0" text="Go" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      
+   </children>
+</GridPane>
